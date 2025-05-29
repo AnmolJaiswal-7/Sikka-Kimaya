@@ -1418,7 +1418,7 @@ div p:last-child {
 
     font-size: 32px;
 
-    color: #be6332;
+    color: #597b88;
 
     margin-right: 0px;
   }
@@ -2644,7 +2644,7 @@ textarea {
 .right-fix a {
   display: block;
 
-  background-color: #be6332;
+  background-color: #000;
 
   color: #fff !important;
 
@@ -3083,8 +3083,12 @@ textarea {
   font-weight: bold;
 }
 
+.button-top a{
+  color: white;
+}
+
 .button-top {
-  background: #be6332;
+  background: black;;
 
   position: fixed;
 
@@ -3115,4 +3119,10 @@ textarea {
   transition: all 500ms ease;
 
   z-index: 99;
+}
+
+
+.form-group textarea{
+  resize: none;
+  height: 100px;
 }
