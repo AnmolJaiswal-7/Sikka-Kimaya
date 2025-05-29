@@ -825,9 +825,9 @@ div p:last-child {
 
 @media screen and (max-width: 570px) {
   .container {
-    padding-left: 40px !important;
+    padding-left: 20px !important;
 
-    padding-right: 40px !important;
+    padding-right: 20px !important;
   }
 }
 
@@ -2276,7 +2276,7 @@ textarea {
   .modal-content .mb-r {
     width: 100%;
 
-    padding: 30px 30px 75px 30px;
+    padding: 30px 30px 30px 30px;
   }
 
   .modal-body .close {
