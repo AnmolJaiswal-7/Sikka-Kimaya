@@ -178,6 +178,11 @@
     display: block;
     margin-left: 30px;
   }
+
+  .header-right{
+    display: flex;
+    justify-content: space-around;
+  }
     </style>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/animations.css">
@@ -250,6 +255,7 @@
                 <div class="logo">
                     <a href="#"><img src="images/logo.png" alt=""></a>
                 </div>
+                
                 <div class="header-right">
                     <div class="t-menu">
                         <div class="wsmenucontainer">
@@ -268,16 +274,18 @@
                                         <li><a href="/">Apartments</a></li>
                                         <li><a data-bs-toggle="modal" data-bs-target="#enquire" href="#contact">Contact
                                                 Us</a></li>
-                                                <div class="main-menu__btn-box" data-bs-toggle="modal" data-bs-target="#enquire">
-                                                    <button id="openModalBtn" class="thm-btn main-menu__btn">Schedule a
-                                                        Visit</button>
-                                                </div>
+                                                
                                     </ul>
                                 </nav>
                             </div>
                         </div>
                     </div>
+               
+                        <button id="openModalBtn"    data-bs-toggle="modal" data-bs-target="#enquire" class="thm-btn main-menu__btn">Schedule a
+                            Visit</button>
+                    
                 </div>
+                
                 <div class="clear"></div>
             </div>
         </header>
