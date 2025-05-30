@@ -90,7 +90,6 @@
   width: 80%;
 }
 
-
 .wsmenu-list li:last-child a {
   border-right: 0px solid;
 }
@@ -1335,7 +1334,7 @@
 
   .wsmenu .wsmenu-list {
     height: 100%;
-    
+
     overflow-y: auto;
 
     display: block !important;
@@ -1838,7 +1837,6 @@
   }
 
   .animated-arrow span:before {
-    
     top: -7px;
   }
 
@@ -1850,7 +1848,7 @@
   .animated-arrow span:before,
   .animated-arrow span:after {
     transition: all 500ms ease-in-out;
-    background: #fff;
+    background: #000;
     width: 30px;
     height: 4px;
     border-radius: 8px;

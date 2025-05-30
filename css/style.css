@@ -1,11 +1,13 @@
 /* @import url("../css2.html"); */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
 html,
 body,
 div,
@@ -161,7 +163,6 @@ html {
   border-radius: 0;
 }
 
-
 .top-nav .container {
   padding-top: 0;
 
@@ -184,7 +185,6 @@ html {
   .sticky {
     padding: 5px 0;
   }
-
 }
 
 header {
@@ -198,9 +198,8 @@ header {
 
   width: calc(100% - 20px);
 
-  background-color: #a0b5bd !important;
+  background-color: white !important;
 
-  background: #a0b5bd;
   height: auto;
 
   padding: 5px;
@@ -245,7 +244,6 @@ header .header-right img {
 
   height: auto;
 }
-
 
 header .call {
   float: right;
@@ -564,7 +562,7 @@ h2 {
 
   height: 3px;
 
-  background-color: #597b88;
+  background-color: #a8be04;
 
   left: 0;
 
@@ -645,7 +643,8 @@ div p:last-child {
   font-size: 14px;
 
   line-height: 26px;
-
+  color: black;
+  text-decoration: none;
   text-align: justify;
 
   margin-bottom: 0 !important;
@@ -830,7 +829,6 @@ div p:last-child {
     padding-right: 20px !important;
   }
 }
-
 
 .slide ul li {
   margin: 0 0 15px 0;
@@ -1021,7 +1019,9 @@ div p:last-child {
 
   font-weight: 700;
 
-  background: linear-gradient(120deg, #e6f0ff, #d4cbb7, #f7f5f2) !important;
+  /* background: linear-gradient(120deg, #e6f0ff, #d4cbb7, #f7f5f2) !important; */
+
+  background-color: rgba(255, 255, 255, 0.705);
 
   margin-top: 0;
 
@@ -1047,7 +1047,7 @@ div p:last-child {
 }
 
 .enquiry form button {
-  background-color: #000000;
+  background-color: #a8be04;
 
   width: 100%;
 
@@ -1238,6 +1238,7 @@ div p:last-child {
 
 @media screen and (max-width: 992px) {
 }
+
 .types ul {
   display: table;
 
@@ -1506,7 +1507,6 @@ div p:last-child {
   margin: 10px 0;
 }
 
-
 #amenities .amt-img img {
   margin-bottom: 30px;
 }
@@ -1693,7 +1693,7 @@ div p:last-child {
 
 .floor-plan {
   border-radius: 15px 0 15px 0;
-
+  /* text-decoration: none; */
   overflow: hidden;
 
   margin: 0 0 14px 0;
@@ -2795,7 +2795,6 @@ textarea {
   height: 100%;
 }
 
-
 .map-container iframe {
   width: 100%;
 
@@ -2869,7 +2868,7 @@ textarea {
 
   cursor: pointer;
 
-  background: linear-gradient(120deg, #e6f0ff, #d4cbb7, #f7f5f2);
+  background: #a8be04;
 
   color: #000000 !important;
 
@@ -3083,12 +3082,12 @@ textarea {
   font-weight: bold;
 }
 
-.button-top a{
+.button-top a {
   color: white;
 }
 
 .button-top {
-  background: black;;
+  background: black;
 
   position: fixed;
 
@@ -3121,8 +3120,7 @@ textarea {
   z-index: 99;
 }
 
-
-.form-group textarea{
+.form-group textarea {
   resize: none;
   height: 100px;
 }
