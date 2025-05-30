@@ -143,7 +143,12 @@
                     <i class="fa fa-gift"></i> Book Your Best Deal Now!<span
                     ></span>
                   </h2>
-                  <form method="post" id="submitform">
+
+                  <form
+                    method="post"
+                    id="submitform"
+                    onsubmit="return validateForm()"
+                  >
                     <div class="form-group">
                       <input
                         type="text"
@@ -151,8 +156,10 @@
                         class="form-control"
                         required
                         placeholder="Enter Your Name"
+                        id="name"
                       />
                     </div>
+
                     <div class="form-group">
                       <input
                         type="text"
@@ -160,8 +167,10 @@
                         class="form-control"
                         required
                         placeholder="Enter Your Mobile Number"
+                        id="mobile"
                       />
                     </div>
+
                     <div class="form-group">
                       <input
                         type="email"
@@ -169,8 +178,10 @@
                         class="form-control"
                         required
                         placeholder="Enter Your Email Address"
+                        id="email"
                       />
                     </div>
+
                     <div class="form-group">
                       <input
                         type="hidden"
@@ -181,40 +192,44 @@
                       />
                     </div>
 
-                    <!-- New Textarea Field -->
                     <div class="form-group">
                       <textarea
                         name="message"
                         class="form-control"
                         placeholder="Enter your message or query here"
+                        id="message"
                       ></textarea>
                     </div>
 
                     <input type="hidden" name="" id="ip" value="49.249.44.18" />
+
                     <input
-                      type="button"
+                      type="submit"
                       value="Enquire Now"
                       name="submit"
                       class="btn btn-info micro-form-btn effetMoveGradient submit_1"
-                      id="SubmitQuery"
-                      onclick="contactusbutton()"
                       style="
                         background-color: #a8be04;
                         color: #fff;
                         border-color: white;
                       "
                     />
-                    <br />
 
-                    <div class="loan-form" style="margin-top: 10px">
+                    <div class="loan-form mt-2">
                       <label
                         for="sw-checkbox-1"
                         class="switch text"
-                        style="font-size: 10px; color: #000; line-height: 15px"
+                        style="font-size: 10px; color: #000"
                       >
                         Please leave your details here. We will get back to you!
                       </label>
                     </div>
+
+                    <!-- Error display -->
+                    <div
+                      id="formError"
+                      style="color: red; margin-top: 10px"
+                    ></div>
                   </form>
                 </div>
               </div>
@@ -992,5 +1007,75 @@
       type="application/javascript"
       src="https://api.ipify.org?format=jsonp&callback=getIP"
     ></script>
+
+    <script>
+      function validateForm() {
+        const name = document.getElementById("name").value.trim();
+        const mobile = document.getElementById("mobile").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const errorDiv = document.getElementById("formError");
+
+        // Reset errors
+        errorDiv.innerText = "";
+
+        // Name
+        if (name.length < 2) {
+          errorDiv.innerText = "Please enter a valid name.";
+          return false;
+        }
+
+        // Mobile
+        const mobileRegex = /^[6-9]\d{9}$/;
+        if (!mobileRegex.test(mobile)) {
+          errorDiv.innerText =
+            "Please enter a valid 10-digit Indian mobile number.";
+          return false;
+        }
+
+        // Email
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+          errorDiv.innerText = "Please enter a valid email address.";
+          return false;
+        }
+
+        return true; // Allow form submission
+      }
+    </script>
+
+    <script>
+      function contactusbutton1() {
+        const name = document.getElementById("name1").value.trim();
+        const mobile = document.getElementById("phone1").value.trim();
+        const email = document.getElementById("email1").value.trim();
+
+        let errorMsg = "";
+
+        // Validate Name
+        if (name.length < 2) {
+          errorMsg = "Please enter a valid name.";
+        }
+
+        // Validate Mobile
+        const mobileRegex = /^[6-9]\d{9}$/;
+        if (!mobileRegex.test(mobile)) {
+          errorMsg = "Please enter a valid 10-digit Indian mobile number.";
+        }
+
+        // Validate Email
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+          errorMsg = "Please enter a valid email address.";
+        }
+
+        if (errorMsg) {
+          alert(errorMsg);
+          return false;
+        }
+
+        // If valid, submit the form manually or trigger AJAX here
+        document.getElementById("submitform1").submit();
+      }
+    </script>
   </body>
 </html>
