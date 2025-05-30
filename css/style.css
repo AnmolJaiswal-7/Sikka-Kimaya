@@ -1706,6 +1706,9 @@ div p:last-child {
 
   box-shadow: 0px 10px 15px -5px rgba(0, 0, 0, 0.15);
 }
+.floor-plan:hover {
+  border-color: #0dcaf0;
+}
 
 .floor-plan img {
   width: 100%;
@@ -2870,7 +2873,7 @@ textarea {
 
   background: #a8be04;
 
-  color: #000000 !important;
+  color: #fff !important;
 
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
 
